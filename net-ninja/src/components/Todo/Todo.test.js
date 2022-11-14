@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Todo from "./Todo.js";
 
-const mockTodo = () => {
+const MockTodo = () => {
   return (
     <BrowserRouter>
       <Todo />
@@ -11,7 +11,7 @@ const mockTodo = () => {
 };
 describe("Todo test", () => {
   it("Selecting input field and button?", async () => {
-    render(<mockTodo />);
+    render(<MockTodo />);
     const inputElement = screen.getByPlaceholderText(/Add a new task here.../i);
     const buttonElement = screen.getByRole("button", { name: "Add" });
     // expect(inputElement).toBeInTheDocument();
